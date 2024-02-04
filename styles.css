@@ -1,0 +1,99 @@
+:root {
+  --color-dark: hsl(300, 32%, 9%);
+  --color-light: hsl(75, 85%, 76%);
+  background: var(--color-dark);
+  color: var(--color-light);
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+*, *::before, *::after {
+    position: relative;
+    box-sizing: border-box;
+}
+header,
+main,
+footer {
+  width: 100%;
+  padding: 4rem;
+}
+header{
+    border-bottom: 1px solid var(--color-light);
+    padding-bottom: 2rem;
+}
+main {
+  flex-grow: 1;
+}
+footer {
+  border-top: 1px solid var(--color-light);
+  text-align: right;
+  padding-block: 1rem;
+  font-size: .8em;
+}
+hgroup {
+  text-align: center;
+}
+h1 {
+    font-weight: 400;
+    font-size: 4em;
+    font-size: calc(36px + (64 - 36) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: 0 ;
+}
+hgroup p:last-of-type {
+  margin-bottom: 0;
+}
+#calculator {
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 2px solid var(--color-light);
+    max-width: 480px;
+    margin-inline: auto;
+}
+#display {
+  padding: 2rem;
+  text-align: right;
+  min-height: 5.2rem;
+}
+#operators-keys {
+  margin-bottom: 1px;}
+#keys > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+
+}
+#keys #result {
+    grid-column: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+button {
+    min-height: 4rem;
+    background: var(--color-light);
+    border: 0;
+    font-family: "Major Mono Display", monospace;
+    font-size: 1.2em;
+}
+button:hover {
+    background: hsla(75, 85%, 76%,.3);
+    color: var(--color-light);
+}
+a {
+    color: var(--color-light);
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
